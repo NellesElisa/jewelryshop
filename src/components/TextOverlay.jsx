@@ -3,7 +3,7 @@ import { Scroll } from '@react-three/drei';
 
 const TextOverlay = () => {
   return (
-    <Scroll html style={{ width: '100%' }}>
+    <Scroll html>
       <div className="scroll-container">
         
         <section id="section1" className="scroll-section section1">
@@ -39,7 +39,7 @@ const TextOverlay = () => {
           <div className="portfolio-grid">
             <div className="portfolio-item">
               <img 
-                src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=400&q=80" 
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" 
                 alt="Bague restaurée" 
               />
               <p>Restauration d'une bague en or blanc avec ajout de diamants sertis.</p>
@@ -53,7 +53,7 @@ const TextOverlay = () => {
             </div>
             <div className="portfolio-item">
               <img 
-                src="https://images.unsplash.com/photo-1516035069371-29a5e47e2f6c?auto=format&fit=crop&w=400&q=80" 
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" 
                 alt="Boucles d'oreilles rénovées" 
               />
               <p>Remise à neuf de boucles d’oreilles vintage avec sertissage de pierres précieuses.</p>
