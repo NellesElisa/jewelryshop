@@ -17,7 +17,9 @@
   color: var(--text-color);
 }
 
-body, html, #root {
+body,
+html,
+#root {
   height: 100%;
   background-color: var(--bg-light);
   line-height: 1.6;
@@ -143,35 +145,46 @@ body, html, #root {
   gap: 1rem;
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s forwards ease;
 }
 
 /* Animation delay pour chaque section */
 .scroll-section:nth-child(1) {
   animation-delay: 0.2s;
 }
+
 .scroll-section:nth-child(2) {
   animation-delay: 0.4s;
 }
+
 .scroll-section:nth-child(3) {
   animation-delay: 0.6s;
 }
+
 .scroll-section:nth-child(4) {
   animation-delay: 0.8s;
 }
-
 /* Section 1 - Align left */
 .section1 {
-  align-items: flex-start;
-  text-align: left;
+  align-items: flex-start;  /* aligne les enfants vers la gauche */
+  text-align: left;         /* texte aligné à gauche */
+  margin-left: 0;           /* bien coller à gauche */
+  margin-right: auto;
 }
 
 /* Section 2 - Align right */
 .section2 {
-  align-items: flex-end;
-  text-align: right;
+  align-items: flex-end;    /* aligne les enfants vers la droite */
+  text-align: right;        /* texte aligné à droite */
+  margin-left: auto;
+  margin-right: 0;          /* bien coller à droite */
+}
+
+/* Section 3 - Center */
+.section3 {
+  align-items: center;      /* enfants centrés */
+  text-align: center;       /* texte centré */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section2 ul {
@@ -185,12 +198,6 @@ body, html, #root {
 
 .section2 ul li {
   margin-bottom: 8px;
-}
-
-/* Section 3 - Center */
-.section3 {
-  align-items: center;
-  text-align: center;
 }
 
 .section3 ol {
@@ -249,7 +256,7 @@ body, html, #root {
   background-color: var(--bg-white);
   padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
   border: 1px solid rgba(221, 172, 23, 0.3);
   text-align: center;
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
@@ -291,23 +298,29 @@ body, html, #root {
     max-width: 95%;
     padding: 10px;
   }
+
   .scroll-section {
     max-width: 100%;
   }
+
   .section-title {
     font-size: 2.4rem;
   }
+
   .section-text {
     font-size: 1.1rem;
     margin-bottom: 2rem;
   }
+
   .portfolio-grid {
     gap: 1.5rem;
   }
+
   .portfolio-item {
     max-width: 45vw;
     height: auto;
   }
+
   .portfolio-item img {
     height: 150px;
   }
@@ -315,19 +328,23 @@ body, html, #root {
 
 /* Mobiles */
 @media (max-width: 600px) {
+
   .section1,
   .section2,
   .section3 {
     align-items: center !important;
     text-align: center !important;
   }
+
   .section2 ul {
     max-width: 100%;
   }
+
   .portfolio-grid {
     flex-direction: column;
     gap: 1.5rem;
   }
+
   .portfolio-item {
     max-width: 90vw;
     margin: 0 auto;
